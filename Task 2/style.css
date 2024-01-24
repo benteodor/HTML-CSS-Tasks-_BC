@@ -12,3 +12,28 @@ header {
 a {
   color: white;
 }
+
+/* Table */
+
+th {
+  border-bottom: 3px solid white;
+}
+
+thead {
+  font-weight: bolder;
+  background-color: orange;
+  color: white;
+}
+
+td,
+th {
+  text-align: left;
+}
+
+.odd {
+  background-color: bisque;
+}
+
+tr {
+  background-color: pink;
+}
