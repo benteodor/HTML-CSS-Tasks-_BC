@@ -4,117 +4,116 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-header,
-footer {
-  color: blue;
-}
-
-header {
-  display: flex;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #ffff02;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: stretch;
-}
-
-nav ul li {
-  margin-right: 1px;
-  padding: 20px;
-}
-
-main {
-  display: flex;
-}
-
-section,
-aside {
-  flex: 2;
+  font-size: 1.5rem;
+  height: 100%;
 }
 
 .pm {
-  background-color: #ffc1cc;
+  margin: 2px;
+  min-height: 100px;
 }
 
-section,
-aside,
-.main-content,
-.main-content-img,
-.side-bar,
-.ads,
-.other-stuff {
-  background-color: #ddd;
-}
-
-.post-title-pm {
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #688995;
-  margin: 0;
-  padding-bottom: 30px;
 }
 
-.post-meta {
-  background: #90ef90;
-  padding-bottom: 288px;
+.site-title {
+  background-color: yellow;
+  flex: 1;
 }
 
-.main-content-img {
-  padding-bottom: 150px;
-  background: #ffff02;
+nav {
+  flex: 1;
 }
 
-.main-content {
-  background: #d3d3d3;
-  padding-bottom: 120px;
-  padding-right: 149px;
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  background-color: pink;
+  flex: 1;
+}
+
+/* main area */
+
+main {
+  display: flex;
+  height: 100%;
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  flex: 3;
+}
+
+.post-title {
+  background-color: #878787;
 }
 
 .section-post-container {
   display: flex;
-  flex-direction: row;
+  height: calc(100% - 104px);
 }
 
-.footer {
-  background: #a52b2a;
-  padding: 20px;
+.post-meta {
+  flex: 1;
+  background-color: lightgreen;
 }
 
-.side-bar {
-  background: #ffa502;
-  padding-bottom: 100px;
+.main-content-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
 }
 
-.ads {
-  background: #008000;
-  padding-bottom: 100px;
+.main-content {
+  background-color: lightgrey;
+  flex: 1;
 }
 
-.other-stuff {
-  background: #ee82ee;
-  padding-bottom: 100px;
+.main-content-img {
+  background-color: yellow;
+  flex: 2;
 }
 
-footer p {
-  margin: 0;
+/*aside*/
+
+aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+aside div:first-child {
+  background-color: orange;
+  flex: 1;
+}
+
+aside div:nth-child(2) {
+  background-color: green;
+  flex: 1;
+}
+
+aside div:last-child {
+  background-color: violet;
+  flex: 1;
+}
+
+/* footer */
+
+footer {
+  background-color: brown;
+}
+
+@media (max-width: 768px) {
+  .section-post-container {
+    flex-direction: column;
+  }
 }
